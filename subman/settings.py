@@ -36,8 +36,11 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'playground',
-    'debug_toolbar'
+    'debug_toolbar',
+    'corsheaders',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -48,7 +51,10 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware'
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'corsheaders.middleware.CorsMiddleware'
+
 ]
 
 ROOT_URLCONF = 'subman.urls'
@@ -58,7 +64,6 @@ INTERNAL_IPS = [
     '127.0.0.1',
     # ...
 ]
-
 
 
 TEMPLATES = [
@@ -133,3 +138,9 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# put http://localhost:3000 to the whistlist to prevent CORS errors
+CORS_ORIGIN_WHITELIST = [
+    'https://localhost:3000'
+]
