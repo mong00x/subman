@@ -19,6 +19,10 @@ install from pipfile using pipenv
 
 `$ pipenv install`
 
+Then activate the virtual environment with 
+
+`$ pipenv shell`
+
 This should set up a local python environment inside your repo so we can all keep insync
 
 If you install any dependencies make sure you do so via pipenv, so it gets added to the pipfile.
