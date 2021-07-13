@@ -1,6 +1,8 @@
 #Global Git Ignore
 
-#ignore pycache files
+
+#ignore Django Build files
+
 /subman/__pychache__
 
 #ignore VSCode Configs

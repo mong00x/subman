@@ -1,9 +1,9 @@
-Hi there :smiley: <br>
+# Hi there :smiley: <br>
 This is the repo of Team MasterOfNone
 
 How to run the project:
 
-clone this repo
+## 1. Clone this repo
 
 `$ git clone https://github.com/mitchelljphayes/subman.git`
 
@@ -11,6 +11,7 @@ move into the subman directory
 
 `$ cd subman`
 
+## 2. Set up environment
 make sure you have pipenv installed using pip or pip3 depending on your system.
 
 `$ pip install pipenv`
@@ -27,8 +28,44 @@ This should set up a local python environment inside your repo so we can all kee
 
 If you install any dependencies make sure you do so via pipenv, so it gets added to the pipfile.
 
-#add .env file
+
+add .env file
 you should have recieved a .env file with our SECRETS ;) add that to the root directory and re run`$ pipenv install`
+
+## 3. Set up database
+
+install mysql -> https://dev.mysql.com/downloads/mysql/ (don't be a sucker get the community edition)
+
+make sure you set a root user password. 
+
+once you have it installed MYSQL launch the server with the CLI
+
+`$ mysql.server`
+
+login
+
+`$ mysql -u root -p`
+
+create a new database called subman
+
+`$ CREATE DATABASE subman`
+
+leave the server running and open a new shell
+
+return to your pipenv environment
+
+run `$ pipenv install` to make sure you have the mysql package
+
+add your mySQL root password to the .env file
+
+`DB_PASSWORD = <password>`
+
+run the migrations  
+
+`$ python manage.py makemigrations`
+`$ python manage.py migrate`
+
+Django will now have generated the tables in the database. Verify with your favourite DBMS tool like mySQL server or DataGrip
 
 # How to run React 
 # Getting Started with Create React App
