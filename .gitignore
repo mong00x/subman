@@ -3,7 +3,7 @@
 
 #ignore Django Build files
 
-/subman/__pychache__
+*/*/__pychache__
 
 #ignore VSCode Configs
 .VSCode
