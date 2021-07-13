@@ -1,0 +1,13 @@
+#Global Git Ignore
+
+#ignore pycache files
+/subman/__pychache__
+
+#ignore VSCode Configs
+.VSCode
+
+#ignore database
+db.sqlite3
+
+#ignore .env file
+.env 
