@@ -38,12 +38,7 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('transaction_date', models.DateTimeField(auto_now=True)),
                 ('transaction_cost', models.DecimalField(decimal_places=4, max_digits=10)),
-                ('transaction_subscription', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='subscription.subscription')),
-            name='Subscription',
-            fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(max_length=30)),
-                ('description', models.CharField(max_length=50)),
+                ('transaction_subscription', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='subscription.subscription'))
             ],
         ),
     ]
