@@ -38,21 +38,22 @@ install mysql -> https://dev.mysql.com/downloads/mysql/ (don't be a sucker get t
 
 make sure you set a root user password. 
 
-once you have it installed MYSQL launch the server with the CLI
+after installing MySQL launch the server either with mySQL workbench or however you prefer. CLI instructions bellow. 
 
-`$ mysql.server`
+`$ mysql.server start`
 
 login
 
 `$ mysql -u root -p`
 
+you will be propted to enter your root user password, so do that.
+
 create a new database called subman
 
-`$ CREATE DATABASE subman`
+`-> CREATE DATABASE subman;`
+`-> exit`
 
-leave the server running and open a new shell
-
-return to your pipenv environment
+return to your pipenv environment and the root directory of subman
 
 run `$ pipenv install` to make sure you have the mysql package
 
@@ -65,7 +66,7 @@ run the migrations
 `$ python manage.py makemigrations`
 `$ python manage.py migrate`
 
-Django will now have generated the tables in the database. Verify with your favourite DBMS tool like mySQL server or DataGrip
+Django will now have generated the tables in the database. Verify with your favourite DBMS tool like mySQL server or DataGrip or with CLI if you're into that kind of thing. 
 
 # How to run React 
 # Getting Started with Create React App
