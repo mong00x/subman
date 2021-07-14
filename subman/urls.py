@@ -19,7 +19,6 @@ import debug_toolbar
 from playground import views as playgroundViews
 from subscription import views as subscriptionViews
 from rest_framework.authtoken import views as authViews
-
 from rest_framework import routers
 
 router = routers.DefaultRouter()
