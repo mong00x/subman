@@ -118,3 +118,33 @@ button {
 .rotate.down {
   transform: rotate(180deg);
 }
+
+
+/* Sub.jsx */
+.sub-item {
+  margin: 12px 0;
+  padding: 10px;
+  background: #ffffff;
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.12);
+  border-radius: 17px;
+}
+
+.sub-icon {
+  width: 2.5rem;
+  height: auto;
+}
+
+.sub-icon-background {
+  padding: 5px;
+  background: #ffffff;
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+}
+
+.sub-time-left-icon-background {
+  padding: 5px;
+}
+
+.sub-item .textarea {
+  text-align: center;
+}
