@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 from django.db.models.deletion import PROTECT
 
@@ -38,7 +39,7 @@ class Subscription(models.Model):
     subscription_cost = models.DecimalField(max_digits=10, decimal_places=4)
     subscription_start = models.DateField()
     subscription_frequency = models.CharField(max_length=1, choices=SUBSCRIPTION_FREQUENCIES, default=SUBSCRIPTION_MONTHLY)
-    # subscription_category = models.ForeignKey(Category, on_delete=PROTECT)
+    subscription_user = models.ForeignKey(User, on_delete=PROTECT)
 
     def __str__(self):
         return self.subscription_name

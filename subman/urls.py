@@ -16,15 +16,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 import debug_toolbar
+from playground import views as playgroundViews
+from subscription import views as subscriptionViews
+from rest_framework.authtoken import views as authViews
 
 from rest_framework import routers
-from playground import views
-from subscription import views
 
 router = routers.DefaultRouter()
-router.register(r'subscription', views.SubscriptionView, 'subscription')
+router.register(r'subscription', subscriptionViews.SubscriptionView, 'subscription')
+router.register(r'playground', playgroundViews.PlaygroundView, 'playground')
+router.register(r'users', subscriptionViews.UserViewSet)
+router.register(r'groups',subscriptionViews.GroupViewSet)
 
-#router.register(r'playground', views.PlaygroundView, 'playground')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,4 +35,8 @@ urlpatterns = [
     path('subscription/', include('subscription.urls')),
     path('__debug__/', include(debug_toolbar.urls)),
     path('api/', include(router.urls)),
+    path('', include(router.urls)),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('api-token-auth/', authViews.obtain_auth_token),
+    path('dj-rest-auth/', include('dj_rest_auth.urls'))
 ]

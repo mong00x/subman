@@ -10,6 +10,7 @@ djangorestframework = "*"
 django-cors-headers = "*"
 mysqlclient = "*"
 python-dotenv = "*"
+dj-rest-auth = "*"
 
 [dev-packages]
 
