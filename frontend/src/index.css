@@ -1,13 +1,70 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+
+/* global */
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Poppins", sans-serif;
+  height: 120vh;
 }
+
+button {
+}
+
+.container {
+  max-width: none;
+  margin: 0px auto;
+  padding: 12px;
+  overflow: auto;
+}
+.flex {
+  display: flex;
+}
+.space-between {
+  justify-content: space-between;
+}
+
+/* Nav.jsx */
+.nav-group {
+  margin: 12px 0;
+}
+
+.nav-icon {
+  width: 2.5rem;
+  height: auto;
+  cursor: pointer;
+}
+
+.nav-bar {
+  padding: 12px;
+  background: #ffffff;
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.12);
+  border-radius: 33px;
+  position: fixed;
+}
+
+/* todo transition: ease backgrpound while scroll down */
+.inactive {
+  width: auto;
+  height: auto;
+}
+
+/* todo transsition: expand amination */
+.active {
+  min-width: 300px;
+  height: auto;
+}
+
+.profile {
+  width: 4rem;
+  height: auto;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 0 0 auto;
+}
+
+/*  */
