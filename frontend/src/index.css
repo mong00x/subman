@@ -12,6 +12,12 @@ body {
   height: 120vh;
 }
 
+hr {
+  margin: 12px 14px;
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.623);
+}
+
 button {
 }
 
@@ -67,4 +73,48 @@ button {
   margin: 0 0 0 auto;
 }
 
-/*  */
+/* Total Subs */
+/* todo total-subs expand animation  */
+.total-subs {
+  transition: 0.3s;
+  background: linear-gradient(94.21deg, #cedefc 3.03%, #dee9fd 117.94%);
+  border-radius: 18px;
+}
+
+.total,
+.detail {
+  padding: 14px 16px;
+}
+
+.textarea > .f3 {
+  font-size: 1rem;
+}
+
+.textarea > .f5 {
+  font-size: 1.3rem;
+}
+
+.textarea > .f2 {
+  font-size: 0.8rem;
+}
+
+.textarea > .bold {
+  font-weight: 800;
+}
+
+.textarea > .gray {
+  color: #696969;
+}
+
+.rotate {
+  width: 3rem;
+  height: auto;
+  margin: 0 12px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+}
+
+.rotate.down {
+  transform: rotate(180deg);
+}
