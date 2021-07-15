@@ -7,7 +7,7 @@ from .models import Subscription, Transaction
 class SubscriptionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Subscription
-        fields = ('id', 'subscription_name', 'subscription_category', 'subscription_logo_path', 'subscription_cost', 'subscription_start', 'subscription_user')
+        fields = ('id', 'subscription_name', 'subscription_category', 'subscription_frequency', 'subscription_logo_path', 'subscription_cost', 'subscription_start', 'subscription_user')
 
 # class SubscriptionOccuranceSerializer(serializers):
 #     class Meta:

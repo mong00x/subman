@@ -13,7 +13,8 @@ import {ReactComponent as PlusIcon} from '../icons/plus.svg'
 
 
 
-const HomePage = () => {
+const HomePage = (props) => {
+
     return (
         <div className="container">
             Home Page
