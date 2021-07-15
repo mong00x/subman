@@ -38,7 +38,7 @@ const Chart = ({start,period}) => {
     const daysLeft = dhm(Date.parse(new Date(nextBillDate)) - Date.parse(new Date()))
     const daysPassed = 30 - daysLeft
 
-    const setColor = () => daysLeft > 15 ? "#36C688" : daysLeft > 7 ? "EABC51" : "ff6d6d"  
+    const setColor = () => daysLeft > 15 ? "#36C688" : daysLeft > 7 ? "#EABC51" : "#ff6d6d"  
     
 
     // console.log(startDate)
@@ -63,8 +63,8 @@ const Chart = ({start,period}) => {
                 }}
                 
             />
-            <div style={{position:'absolute',width:'100%',height:'100%', textAlign:'center', display:'flex', justifyContent:'space-around', alignItems:'center',marginTop:'12px', fontSize:'.8rem' }}>
-                {daysLeft === 0 ? <p style={{color:'red'}}>{daysLeft}</p> : <p>{daysLeft}</p>}
+            <div style={{position:'absolute',width:'100%',height:'100%', textAlign:'center', display:'flex', justifyContent:'space-around', alignItems:'center', fontSize:'.8rem' }}>
+                {daysLeft < 7 ? <p style={{color:'red', marginTop:'10px'}}>{daysLeft}</p> : <p style={{marginTop:'10px'}}>{daysLeft}</p>}
                 </div>
 
         </div>

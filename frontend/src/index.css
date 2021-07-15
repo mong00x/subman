@@ -126,14 +126,12 @@ hr {
 }
 
 .nav-closed-exit {
-
 }
 
 .nav-closed-exit-active {
   transform: translateX(110%);
   transition: all var(--speed) ease;
 }
-
 
 .profile {
   width: 4rem;
@@ -142,7 +140,6 @@ hr {
   display: inline-block;
   margin: 0 0 0 auto;
 }
-
 
 /* Total Subs */
 /* todo total-subs expand animation  */
@@ -232,7 +229,6 @@ hr {
   text-align: center;
 }
 
-
 /* Button.jsx */
 .button-background {
   margin: 12px 6px;
@@ -284,7 +280,6 @@ hr {
   font-size: 0.8rem;
 }
 
-
 /* Add page */
 .add-page-header {
   margin: auto;
@@ -307,7 +302,6 @@ hr {
   transform: translateX(-110%);
   transition: all var(--speed) ease;
 }
-
 
 .custom-menu-enter {
   transform: translateX(110%);
