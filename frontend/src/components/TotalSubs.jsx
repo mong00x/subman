@@ -6,7 +6,6 @@ const TotalSubs = () => {
     const [showDetail, setShowDetail] = useState(false)
     const onClick = () =>{
         setShowDetail(!showDetail)
-        console.log(showDetail)
     }
     return (
         <div className={showDetail? "total-subs expand" : "total-subs"}>
