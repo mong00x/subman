@@ -1,5 +1,5 @@
 import React from 'react'
-import {ReactComponent as Slack} from '../icons/Slack.svg'
+import {ReactComponent as Slack} from '../icons/slack.svg'
 
 
 const RecentSubs = () => {
