@@ -37,9 +37,16 @@ const HomePage = (props) => {
             <div className=" flex row overflow-x">
                 <AddButton buttonIcon = {<PlusIcon className="button-icon"/>}
                 buttonMessage = "Add Subscription"/>
-                <RecentSubs />
-                <RecentSubs />
-                <RecentSubs />
+                {subsDatas.sort((a,b) => a.subscrition_start - b.subscrition_start).map((Data) => <RecentSubs 
+                key={Data.id}
+                icon={Data.subscription_logo_path}
+                name={Data.subscription_name}
+                price={Data.subscription_cost} 
+                period={Data.subscription_frequency}
+                start={Data.subscription_start}
+            />)}
+                {/* <RecentSubs />
+                <RecentSubs /> */}
             </div>
                 
             <div style={{margin:"10px 0"}}>

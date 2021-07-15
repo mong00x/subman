@@ -13,10 +13,33 @@ import { ReactComponent as YoutubeLogo } from "../icons/subicons/Youtube.svg";
 
 
 import { CSSTransition } from 'react-transition-group';
+import axios from 'axios';
 
 
 const AddPage = () => {
+    
     const [activeMenu, setActiveMenu] = useState('presets');
+    
+    // const createSubscription = (e) => {
+    //     e.preventDefault();
+    //     const subData = {
+    //         subName,
+    //         subCategory,
+    //         subCost,
+    //         subFrequency,
+    //         subIcon,
+    //         subStart,
+    //         subUser,
+    //     };
+    //     axios.post('/subscription',subData,
+    //     ).then ((response) => {
+    //         console.log(response);
+    //     })
+    // }
+
+    // const handleSubmit = () => {
+        
+    // };
 
     return (
         <div className="container">
@@ -77,7 +100,7 @@ const AddPage = () => {
                 unmountOnExit
             >
                 <div className="menu">
-                    <form>
+                    <form onSubmit="">
                         <div className="form-group">
                             <label for="custom-name">Name</label>
                             <input id="custom-name" placeholder="i.e. Netflix" type="text" />
