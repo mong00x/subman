@@ -5,9 +5,9 @@ import {ReactComponent as Slack} from '../icons/slack.svg'
 const RecentSubs = () => {
     return (
 
-        <div className="button-background flex column space-around">
-            <Slack className="button-icon"/>
-            <div className="button-message">
+        <div className="rs-background flex column space-around">
+            <Slack className="rs-icon"/>
+            <div className="rs-message">
                 <p>Recently subscribed</p>
             </div>
          </div>
