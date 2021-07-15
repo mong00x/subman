@@ -19,7 +19,7 @@ const Nav = () => {
 
     return (
         <div className="nav-group flex space-between" >
-            <div className="nav-icons" style={{ width: navWidth }}>
+            <div className="nav-icons" style={{ width: navWidth, display: !showNavBar }}>
                 <CSSTransition
                     in={!showNavBar}
                     timeout={500}

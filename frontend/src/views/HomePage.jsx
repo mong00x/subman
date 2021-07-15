@@ -3,14 +3,12 @@ import TotalSubs from '../components/TotalSubs'
 import Sub from "../components/Sub"
 import AddButton from "../components/AddButton"
 import RecentSubs from '../components/RecentSubs'
-import Chart from '../components/Chart'
 
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 
 /* TEMPORARY, FOR TESTING PURPOSES */
-import {ReactComponent as YoutubeLogo} from '../icons/youtube-logo.svg'
-import {ReactComponent as PieChart} from '../icons/pie-chart.svg'
+
 import {ReactComponent as PlusIcon} from '../icons/plus.svg'
 
 
@@ -47,6 +45,7 @@ const HomePage = (props) => {
             <div style={{margin:"10px 0"}}>
                 <b>Up comming payments(days)</b>
             {subsDatas.map((Data) => <Sub 
+                key={Data.id}
                 icon={Data.subscription_logo_path}
                 name={Data.subscription_name}
                 price={Data.subscription_cost} 
