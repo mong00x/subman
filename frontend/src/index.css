@@ -283,3 +283,41 @@ hr {
   width: auto;
   font-size: 0.8rem;
 }
+
+
+/* Add page */
+.add-page-header {
+  margin: auto;
+  width: 100vw;
+}
+
+/* menu transitions */
+.presets-menu-enter {
+  position: absolute;
+  transform: translateX(-110%);
+}
+.presets-menu-enter-active {
+  transform: translateX(0%);
+  transition: all var(--speed) ease;
+}
+.presets-menu-exit {
+  position: absolute;
+}
+.presets-menu-exit-active {
+  transform: translateX(-110%);
+  transition: all var(--speed) ease;
+}
+
+
+.custom-menu-enter {
+  transform: translateX(110%);
+}
+.custom-menu-enter-active {
+  transform: translateX(0%);
+  transition: all var(--speed) ease;
+}
+
+.custom-menu-exit-active {
+  transform: translateX(110%);
+  transition: all var(--speed) ease;
+}
