@@ -1,18 +1,41 @@
 import React from 'react'
 import Chart from './Chart'
-import {ReactComponent as YoutubeLogo} from '../icons/subicons/Youtube.svg'
+// import {ReactComponent as Netflix} from '../../icons/subicons/Netflix.svg'
+import {ReactComponent as Netflix} from '../icons/Netflix.svg'
+import {ReactComponent as Amazon} from '../icons/Amazon.svg'
+import {ReactComponent as Figma} from '../icons/Figma.svg'
+import {ReactComponent as Spotify} from '../icons/Spotify.svg'
+import {ReactComponent as Slack} from '../icons/Slack.svg'
+import {ReactComponent as Plus} from '../icons/plus.svg'
+import {ReactComponent as Youtube} from '../icons/Youtube.svg'
 
-
-const Sub = ({name, price, period, start}) => {
-    
+const Sub = ({name, price, period, icon}) => {
     console.log(name)
-    const url = 'https://raw.githubusercontent.com/mitchelljphayes/subman/4748cdb21442ec0974eb84327c67ff25665ec0e8/frontend/src/icons/subicons/'
-    const iconPath = url+name+'.svg'
-    console.log(iconPath)
+    console.log(icon)
+    const Logo = () => {
+        switch (name.toLowerCase()) {
+            case 'netflix':
+                return <Netflix />
+            case 'amazon':
+                return <Amazon />
+            case 'figma':
+                return <Figma />
+            case 'spotify':
+                return <Spotify />
+            case 'slack':
+                return <Slack />
+            case 'youtube':
+                return <Youtube />
+            default:
+                return <Plus />
+        }
+    } 
+
+    
     return (
         <div className="sub-item flex space-between">
             <div className="sub-icon-background flex">
-                <img src={iconPath} alt="" />
+                {Logo()}
             </div>
             <div className="sub-description flex">
                 <div className="textarea">
