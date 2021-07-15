@@ -4,6 +4,7 @@ import TotalSubs from '../components/TotalSubs'
 import Sub from "../components/Sub"
 import AddButton from "../components/AddButton"
 import RecentSubs from '../components/RecentSubs'
+import Chart from '../components/Chart'
 
 /* TEMPORARY, FOR TESTING PURPOSES */
 import {ReactComponent as YoutubeLogo} from '../icons/youtube-logo.svg'
@@ -34,9 +35,11 @@ const HomePage = () => {
                     subName="Youtube Premium"
                     subPrice="$99.99"
                     subTimePeriod="month"
-                    subTimeLeftIcon={<PieChart className="sub-time-left-icon"/>}
+                    subTimeLeftIcon={<Chart className=""/>}
                 />
-                <Sub 
+
+
+                {/* <Sub 
                     subIcon={<YoutubeLogo className="sub-icon"/>}
                     subName="Netflix"
                     subPrice="$32.50"
@@ -56,7 +59,7 @@ const HomePage = () => {
                     subPrice="$10000"
                     subTimePeriod="year"
                     subTimeLeftIcon={<PieChart className="sub-time-left-icon"/>}
-                />
+                /> */}
             </div>
             
         </div>

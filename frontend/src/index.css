@@ -96,7 +96,7 @@ hr {
   background: linear-gradient(
     94.21deg,
     #cedefc 3.03%,
-    rgba(238, 243, 252, 0.363) 117.94%
+    rgba(238, 243, 252, 0.692) 117.94%
   );
   border-radius: 18px;
 }
@@ -149,7 +149,8 @@ hr {
 }
 
 .sub-icon {
-  width: 2.5rem;
+  width: 3rem;
+  margin: auto;
   height: auto;
 }
 
@@ -158,10 +159,17 @@ hr {
   background: #ffffff;
   box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.12);
   border-radius: 12px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-grow: 0.1;
 }
 
 .sub-time-left-icon-background {
   padding: 5px;
+  width: 50px;
+  height: 70px;
+  overflow: scroll;
 }
 
 .sub-item .textarea {
