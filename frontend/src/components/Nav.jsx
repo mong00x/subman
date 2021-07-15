@@ -21,7 +21,7 @@ const Nav = () => {
         <div className="nav-group flex space-between" >
             <div className="nav-icons" style={{ width: navWidth, display: !showNavBar }}>
                 <CSSTransition
-                    in={!showNavBar}
+                    in={showNavBar}
                     timeout={500}
                     classNames="nav-closed"
                     unmountOnExit
@@ -33,7 +33,7 @@ const Nav = () => {
 
 
                 <CSSTransition
-                    in={showNavBar}
+                    in={!showNavBar}
                     timeout={500}
                     classNames="nav-open"
                     unmountOnExit

@@ -50,6 +50,7 @@ const HomePage = (props) => {
                 name={Data.subscription_name}
                 price={Data.subscription_cost} 
                 period={Data.subscription_frequency}
+                start={Data.subscription_start}
             />)}
                 
 
