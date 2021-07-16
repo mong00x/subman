@@ -10,6 +10,8 @@ import { ReactComponent as Plus } from '../icons/plus.svg';
 
 const RecentSubs = ({name, price, period, start}) => {
     console.log(name)
+    const colors = ['beige ','antique-white ','pale-pink ','soap ','water ','waterlt '] 
+    const color = colors[Math.floor(Math.random()*colors.length)]
     const Logo = () => {
         switch (name.toLowerCase()) {
             case 'netflix':
@@ -31,7 +33,7 @@ const RecentSubs = ({name, price, period, start}) => {
 
     return (
 
-        <div className="rs-background flex column space-around">
+        <div className={color + 'rs-background flex column space-around'}>
             {Logo()}
             <div className="rs-message">
                 <p>Recently subscribed</p>

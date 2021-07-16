@@ -260,11 +260,13 @@ hr {
   margin: 12px 6px;
   padding: 20px;
   background: #ffffff;
-  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.12);
   border-radius: 45px;
   min-width: 45vw;
   min-height: 44vw;
   text-align: center;
+}
+.rs-background > svg {
+  margin: auto;
 }
 
 .rs-icon {
@@ -314,4 +316,23 @@ hr {
 .custom-menu-exit-active {
   transform: translateX(110%);
   transition: all var(--speed) ease;
+}
+
+.beige {
+  background-color: #eff9da;
+}
+.antique-white {
+  background-color: #f9ebdf;
+}
+.pale-pink {
+  background-color: #f9d8d6;
+}
+.soap {
+  background-color: #d6cdea;
+}
+.water {
+  background-color: #cbe4f9;
+}
+.waterlt {
+  background-color: #cdf5f6;
 }

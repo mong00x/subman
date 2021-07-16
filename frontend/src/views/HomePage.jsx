@@ -31,7 +31,6 @@ const HomePage = (props) => {
     
     return (
         <div className="container">
-            Home Page
             <Nav />
             <TotalSubs />
             <div className=" flex row overflow-x">

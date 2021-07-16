@@ -43,13 +43,13 @@ const AddPage = () => {
 
     return (
         <div className="container">
-            <div className="add-page-header flex">
+            <div style={{alignItems:'center'}}className="add-page-header flex">
                 <Link to="/">
                     <BackIcon />
                 </Link>
 
-                <div className="add-page-title">
-                    <h5>Add a new subscription:</h5>
+                <div styl={{margin:'auto', textAlign:'center',flexGrow:''}} className="add-page-title">
+                    <h5>Add a new subscription</h5>
                 </div>
             </div>
 

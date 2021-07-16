@@ -28,7 +28,7 @@ const Chart = ({start,period}) => {
       if( h === 24 ){
         d++;
         h = 0;
-      }
+      } 
       return d+1;
     }
     
