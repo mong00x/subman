@@ -9,8 +9,10 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
+import os
 from pathlib import Path
+from dotenv import load_dotenv
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-7fqb)0mpxha20r+t)y2b&3sf(#v_@nl-d0@8+(_5bzz54e&6&l'
+SECRET_KEY = os.environ.get('DJANGO_SUBMAN_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -36,11 +38,22 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
 
     'playground',
     'debug_toolbar',
     'corsheaders',
     'rest_framework'
+=======
+    'django.contrib.sessions',
+    'subscription',
+    'playground',
+    'debug_toolbar',
+    'corsheaders',
+    'rest_framework',
+    'rest_framework.authtoken',
+    'dj_rest_auth'
+>>>>>>> 68dc638e820c3298ff7b3e36f111e728bbd47edd
 ]
 
 MIDDLEWARE = [
@@ -52,7 +65,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 68dc638e820c3298ff7b3e36f111e728bbd47edd
     'corsheaders.middleware.CorsMiddleware'
 
 ]
@@ -90,8 +106,11 @@ WSGI_APPLICATION = 'subman.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'subman',
+        'HOST': 'localhost',
+        'USER': 'root',
+        'PASSWORD': os.environ.get('DB_PASSWORD')
     }
 }
 

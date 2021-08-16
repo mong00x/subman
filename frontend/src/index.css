@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+
+/* Global CSS variables */
+:root {
+  --speed: 300ms;
+}
+
+/* global */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: 120vh;
+}
+
+hr {
+  margin: 12px 14px;
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.623);
+}
+
+.container {
+  max-width: none;
+  margin: 0px auto;
+  padding: 12px;
+  overflow: visible;
+}
+.flex {
+  display: flex;
+}
+.column {
+  flex-direction: column;
+}
+.space-between {
+  justify-content: space-between;
+}
+.space-around {
+  justify-content: space-around;
+}
+.row {
+  flex-direction: row;
+}
+.save-shadow {
+  overflow: visible;
+}
+
+/* Nav.jsx */
+.nav-group {
+  margin: 12px 0;
+}
+.overflow-x {
+  margin: 0 -2vw;
+  width: 98vw;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.nav-icons {
+  transition: width var(--speed) ease;
+}
+
+.nav-icon {
+  width: 2.5rem;
+  height: auto;
+  cursor: pointer;
+}
+
+.nav-bar {
+  padding: 12px;
+  background: #ffffff;
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.12);
+  border-radius: 33px;
+  position: fixed;
+
+  transition: width var(--speed) ease;
+}
+
+/* todo transition: ease backgrpound while scroll down */
+.inactive {
+  width: auto;
+  height: auto;
+}
+
+/* todo transsition: expand amination */
+.active {
+  min-width: 260px;
+  height: auto;
+}
+
+/* transition stuff */
+.nav-open-enter {
+  position: absolute;
+  transform: translateX(-110%);
+}
+
+.nav-open-enter-active {
+  transform: translateX(0%);
+  transition: all var(--speed) ease;
+}
+
+.nav-open-exit {
+  position: absolute;
+}
+
+.nav-open-exit-active {
+  transform: translateX(-110%);
+  transition: all var(--speed) ease;
+}
+
+.nav-closed-enter {
+  transform: translateX(110%);
+}
+
+.nav-closed-enter-active {
+  transform: translateX(0%);
+  transition: all var(--speed) ease;
+}
+
+.nav-closed-exit {
+}
+
+.nav-closed-exit-active {
+  transform: translateX(110%);
+  transition: all var(--speed) ease;
+}
+
+.profile {
+  width: 4rem;
+  height: auto;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 0 0 auto;
+}
+
+/* Total Subs */
+/* todo total-subs expand animation  */
+.total-subs {
+  margin: 10px 0;
+  transition: 0.3s;
+  background: linear-gradient(
+    94.21deg,
+    #cedefc 3.03%,
+    rgba(238, 243, 252, 0.692) 117.94%
+  );
+  border-radius: 18px;
+}
+
+.total,
+.detail {
+  padding: 14px 16px;
+}
+
+.textarea > .f3 {
+  font-size: 1rem;
+}
+
+.textarea > .f5 {
+  font-size: 1.3rem;
+}
+
+.textarea > .f2 {
+  font-size: 0.8rem;
+}
+
+.textarea > .bold {
+  font-weight: 800;
+}
+
+.textarea > .gray {
+  color: #696969;
+}
+
+.rotate {
+  width: 3rem;
+  height: auto;
+  margin: 0 12px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+}
+
+.rotate.down {
+  transform: rotate(180deg);
+}
+
+/* Sub.jsx */
+.sub-item {
+  margin: 12px 0;
+  padding: 10px;
+  background: #ffffff;
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.12);
+  border-radius: 17px;
+}
+
+.sub-icon {
+  width: 3rem;
+  margin: auto;
+  height: auto;
+}
+
+.sub-icon-background {
+  padding: 5px;
+  background: #ffffff;
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-grow: 0.1;
+}
+
+.sub-time-left-icon-background {
+  padding: 5px;
+  width: 50px;
+  height: 70px;
+  overflow: scroll;
+}
+
+.sub-item .textarea {
+  text-align: center;
+}
+
+/* Button.jsx */
+.button-background {
+  margin: 12px 6px;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.12);
+  border-radius: 45px;
+  min-width: 45vw;
+  min-height: 44vw;
+  text-align: center;
+}
+
+.button-icon {
+  fill: #80aaff;
+  padding: 5px;
+  width: 5rem;
+  height: auto;
+  margin: auto;
+}
+.button-message > p {
+  bottom: 0;
+  margin: auto 0 0 0;
+  width: auto;
+  font-size: 0.8rem;
+}
+
+/* RecentSubs.jsx */
+.rs-background {
+  margin: 12px 6px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 45px;
+  min-width: 45vw;
+  min-height: 44vw;
+  text-align: center;
+}
+.rs-background > svg {
+  margin: auto;
+}
+
+.rs-icon {
+  padding: 5px;
+  width: 5rem;
+  height: auto;
+  margin: auto;
+}
+.rs-message > p {
+  bottom: 0;
+  margin: auto 0 0 0;
+  width: auto;
+  font-size: 0.8rem;
+}
+
+/* Add page */
+.add-page-header {
+  margin: auto;
+  width: 100vw;
+}
+
+/* menu transitions */
+.presets-menu-enter {
+  position: absolute;
+  transform: translateX(-110%);
+}
+.presets-menu-enter-active {
+  transform: translateX(0%);
+  transition: all var(--speed) ease;
+}
+.presets-menu-exit {
+  position: absolute;
+}
+.presets-menu-exit-active {
+  transform: translateX(-110%);
+  transition: all var(--speed) ease;
+}
+
+.custom-menu-enter {
+  transform: translateX(110%);
+}
+.custom-menu-enter-active {
+  transform: translateX(0%);
+  transition: all var(--speed) ease;
+}
+
+.custom-menu-exit-active {
+  transform: translateX(110%);
+  transition: all var(--speed) ease;
+}
+
+.beige {
+  background-color: #eff9da;
+}
+.antique-white {
+  background-color: #f9ebdf;
+}
+.pale-pink {
+  background-color: #f9d8d6;
+}
+.soap {
+  background-color: #d6cdea;
+}
+.water {
+  background-color: #cbe4f9;
+}
+.waterlt {
+  background-color: #cdf5f6;
+}
