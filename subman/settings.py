@@ -38,13 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-<<<<<<< HEAD
-
-    'playground',
-    'debug_toolbar',
-    'corsheaders',
-    'rest_framework'
-=======
     'django.contrib.sessions',
     'subscription',
     'playground',
@@ -53,7 +46,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'dj_rest_auth'
->>>>>>> 68dc638e820c3298ff7b3e36f111e728bbd47edd
 ]
 
 MIDDLEWARE = [
@@ -65,10 +57,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-<<<<<<< HEAD
-
-=======
->>>>>>> 68dc638e820c3298ff7b3e36f111e728bbd47edd
     'corsheaders.middleware.CorsMiddleware'
 
 ]

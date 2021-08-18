@@ -28,20 +28,9 @@ router.register(r'users', subscriptionViews.UserViewSet)
 router.register(r'groups',subscriptionViews.GroupViewSet)
 
 
-from rest_framework import routers
-from playground import views
-
-router = routers.DefaultRouter()
-router.register(r'playground', views.PlaygroundView, 'playground')
-
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('playground/', include('playground.urls')),
-<<<<<<< HEAD
-    path('__debug__/', include(debug_toolbar.urls)),
-    path('api/', include(router.urls)),
-=======
     path('subscription/', include('subscription.urls')),
     path('__debug__/', include(debug_toolbar.urls)),
     path('api/', include(router.urls)),
@@ -49,5 +38,4 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('api-token-auth/', authViews.obtain_auth_token),
     path('dj-rest-auth/', include('dj_rest_auth.urls'))
->>>>>>> 68dc638e820c3298ff7b3e36f111e728bbd47edd
 ]
